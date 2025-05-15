@@ -13,9 +13,7 @@ app.use(morgan("dev"));
 const cors = require('cors');
 app.use(cors());
 
-app.use(express.json()); // Make sure this is included for JSON parsing
-
-
+app.use(express.json());
 app.use('/api/book', bookRoute);
 
 
@@ -40,3 +38,4 @@ mongoose.connect(process.env.MONGO_URL)
 .catch((err) => {
     console.log("Connection failed", err.message);
 });
+
