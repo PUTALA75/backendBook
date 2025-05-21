@@ -54,7 +54,7 @@ module.exports = { importBooksFromCSV };*/
 
 const fs = require('fs');
 const csv = require('csv-parser');
-const BooksData = require('../models/bookModel');
+const BooksData = require('../models/bookmodel');
 
 const importBooksFromCSV = async (req, res) => {
   if (!req.file) return res.status(400).json({ message: 'CSV file is required' });
