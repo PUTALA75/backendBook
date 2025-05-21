@@ -62,11 +62,12 @@ app.get("/", (req, res) => {
   res.send("Hello from Node API");
 });
 
-// Error handling
+// Error handler
 app.use(errorHandler);
 
-// Database connection and server start
-mongoose.connect(process.env.MONGO_URL)
+// MongoDB + Server init
+mongoose
+  .connect(process.env.MONGO_URL)
   .then(() => {
     console.log("Connected to Database");
     app.listen(process.env.PORT || 3000, () => {
