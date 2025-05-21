@@ -76,7 +76,7 @@ module.exports={
     getBooks,getBookId,createBook,updateBook,deleteBook
 }*/
 
-const BooksData = require('../models/bookModel');
+const BooksData = require('../models/bookmodel');
 
 const getBooks = async (req, res) => {
   try {
